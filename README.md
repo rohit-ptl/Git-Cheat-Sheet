@@ -15,7 +15,7 @@ Git commands cheat sheet
 | git add -p <file> | Add some changes in <file> to the next commit |
 | git commit -a | Commit all changes in currently tracked files |
 | git commit | Commit staged changes |
-| git commit -amend | Amend the last commit |
+| git commit --amend | Amend the last commit |
 | **COMMIT HISTORY** |  |
 | git log | Show all commits, newest first |
 | git log -p <file> | Show tracked history of a file |
@@ -35,15 +35,19 @@ Git commands cheat sheet
 | git pull <remote> <branch> | Download changes and merge <remote> into HEAD |
 | git push <remote> <branch> | Push local changes to <remote> |
 | git branch -dr <remote/branch> | Delete a branch on the remote |
-| git push --tages | Publish your tags |
-| *MERGE AND REBASE** ||
-|||
-|||
-|||
-|||
-|||
-|||
-|||
-
+| git push --tags | Publish your tags |
+| **MERGE AND REBASE** ||
+| git merge <branch> | Merge branch into your current HEAD |
+| git rebase <branch> | Rebase your current HEAD onto <branch> |
+| git rebase --abort | Abort a rebase |
+| git rebase --continue | Continue a rebase after resolving conflicts |
+| git mergetool | Use your confgured merge tool to resolve conflicts |
+| **UNDO**||
+| git reset --hard HEAD | Discard all local changes in your working directory |
+| git checkout HEAD <file> | Discard changes in a specific <file> |
+| git revert <commit> | Revert a commit by producing a new commit with contrary changes |
+| git reset <commit> | Reset HEAD pointer to <commit> and preserve changes as unstaged changes |
+| git reset --hard <commit> | Reset HEAD pointer to <commit> and discard all following changes |
+| git reset --keep <commit> | Reset HEAD pointer to <commit> and preserve uncommitted local changes |
 
   
