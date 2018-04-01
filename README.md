@@ -28,15 +28,15 @@ Git commands cheat sheet
 | git branch -d <branch> | Delete local <branch> |
 | git tag <tag_name> | Make the current commit with a tag |
 | **UPDATE AND PUBLISH** |  |
-|||
-|||
-|||
-|||
-|||
-|||
-|||
-|||
-|||
+| git remote -v | List all currently configured remotes |
+| git remote show <remote> | Show information about a remote |
+| git remote add <shortname> <url> | Add new <remote> repository |
+| git fetch <remote> | Download all changes from <remote> but don't integrate into HEAD |
+| git pull <remote> <branch> | Download changes and merge <remote> into HEAD |
+| git push <remote> <branch> | Push local changes to <remote> |
+| git branch -dr <remote/branch> | Delete a branch on the remote |
+| git push --tages | Publish your tags |
+| *MERGE AND REBASE** ||
 |||
 |||
 |||
