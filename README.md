@@ -5,7 +5,7 @@ Git commands cheat sheet
 
 | Command | Effect|
 | --- | --- |
-| **CREATE COMMANDS** ||
+| **CREATE COMMANDS** | |
 |git init| Create a new local git repository |
 |git clone https://github.com/rohit-patel/Git-Cheat-Sheet | Clone a remote repository locally|
 | **LOCAL CHANGES** |  |
@@ -20,7 +20,30 @@ Git commands cheat sheet
 | git log | Show all commits, newest first |
 | git log -p <file> | Show tracked history of a file |
 | git blame <file> | See change history in <file> by user |
-| **BRANCHES AND TAGS** | |
+| **BRANCHES AND TAGS** |  |
+| git branch -av | List all existing branches |
+| git checkotu <branch> | Switch HEAD to <branch>|
+| git branch <branch_name> | Create branch <branch_name> based on current HEAD |
+| git checkout --track <remote/branch> | Create a new tracking branch based on a remote branch |
+| git branch -d <branch> | Delete local <branch> |
+| git tag <tag_name> | Make the current commit with a tag |
+| **UPDATE AND PUBLISH** |  |
+|||
+|||
+|||
+|||
+|||
+|||
+|||
+|||
+|||
+|||
+|||
+|||
+|||
+|||
+|||
+|||
 
 
   
