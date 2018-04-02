@@ -26,7 +26,7 @@ Git commands cheat sheet
 | git branch <_branch_name_> | Create branch <_branch_name_> based on current HEAD |
 | git checkout --track <_remote/branch_> | Create a new tracking branch based on a remote branch |
 | git branch -d <_branch_> | Delete local <_branch_> |
-| git tag <tag_name> | Make the current commit with a tag |
+| git tag <_tag_name_> | Make the current commit with a tag |
 | **UPDATE AND PUBLISH** |  |
 | git remote -v | List all currently configured remotes |
 | git remote show <_remote_> | Show information about a remote |
