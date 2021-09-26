@@ -2,7 +2,6 @@
 Git commands cheat sheet
 
 
-
 | Command | Effect|
 | --- | --- |
 | **CREATE COMMANDS** | |
