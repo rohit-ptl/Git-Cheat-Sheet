@@ -52,15 +52,18 @@ Git commands cheat sheet
 | git tag -l <_pattern_> | List tags matching <_pattern_> |
 | git tag -d <_tag_name_>| Delete tag <_tag_name_> |
 | **UPDATE AND PUBLISH** |  |
-| git remote -v | List all currently configured remotes |
+| git remote | Shows a list of existing remotes |
+| git remote -v | List all currently configured remotes alongwith remote url |
+| git ls-remote <_remote_> | List references[^1] in remote repository <_remote_> |
 | git remote show <_remote_> | Show information about a remote |
 | git remote add <_shortname_> <_url_> | Add new <_remote_> repository |
-| git fetch <_remote_> | Download all changes from <_remote_> but don't integrate into HEAD |
-| git pull <_remote_> <_branch_> | Download changes and merge <_remote_> into HEAD |
+| git fetch <_remote_> | Download all changes[^a] from <_remote_> but don't integrate into HEAD |
+| git pull <_remote_> <_branch_> | Download changes and merge[^b] <_remote_> into HEAD |
 | git push <_remote_> <_branch_> | Push local changes to <remote> |
 | git push <_remote_> --tags | Push all local tags to <remote> |
+| git push <_remote_> --delete <_branch_> | Delete <_branch_> from <_remote_>[^c] |
 | git push <_remote_> --delete <_tag_name_> | Delete tag <_tag_name_> from <_remote_> |
-| git branch -dr <_remote/branch_> | Delete a branch on the remote |
+| git branch -dr <_remote/branch_> | Delete a local remote tracking branch <_remote/branch_> |
 | git push --tags | Publish your tags |
 | **MERGE AND REBASE** ||
 | git merge <_branch_> | Merge branch into your current HEAD |
@@ -76,3 +79,10 @@ Git commands cheat sheet
 | git reset <_commit_> | Reset HEAD pointer to <_commit_> and preserve changes as unstaged changes |
 | git reset --hard <_commit_> | Reset HEAD pointer to <_commit_> and discard all following changes |
 | git reset --keep <_commit_> | Reset HEAD pointer to <_commit_> and preserve uncommitted local changes |
+
+###### Footnotes
+[^1]: In git references or refs are refrences to commits. E.g. branches, remote-tracking branches and tags. 
+[^a]: Download references alongwith objects necessary to complete their histories.
+[^b]: Instead of merge we can also do rebasing
+[^c]: It also delete corresponding remote tracking branch.
+  
