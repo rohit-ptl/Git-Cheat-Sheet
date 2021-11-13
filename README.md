@@ -1,7 +1,6 @@
 # Git Cheat Sheet
 Git commands cheat sheet
 
-
 | Command | Effect|
 | --- | --- |
 | **CREATE COMMANDS** | |
@@ -40,9 +39,12 @@ Git commands cheat sheet
 | git branch --no-merged | List of branches not merged into current branch |
 | git switch <_branch_> | Switch HEAD to <_branch_> |
 | git checkout <_branch_> -- | Switch HEAD to <_branch_>. switch command is safer than this |
-| git branch <_branch_> | Create branch <_branch_> based on current HEAD |
+| git branch <_new_branch_> | Create branch <_new_branch_> based on current HEAD |
+| git branch <_new_branch_> <_base_branch_> | Create branch <_new_branch_> based on <_base_branch_> |
+| git branch <_new_branch_> <_tag_name_> | Create branch <_new_branch_> based on tag <_tag_name_> |
 | git switch  -c  new-branch | To create and swtich to new branch in one go |
-| git checkout --track <_remote/branch_> | Create a new tracking branch based on a remote branch |
+| git checkout --track <_remote/branch_> | Create new local branch based on a remote branch[^a] and switch to new branch|
+| git branch --track <new-branch> <_remote/branch_> | Create new local branch based on a remote branch[^a] |
 | git branch -d <_branch_> | Delete local <_branch_>. Prevents deletion of unmerged branch |
 | git branch -D <_branch_> | Delete local <_branch_>. Unsafe as it can delete unmerged branch |
 | git tag <_tag_name_> | Create ligthweight tag for current commit |
@@ -57,11 +59,12 @@ Git commands cheat sheet
 | git ls-remote <_remote_> | List references[^1] in remote repository <_remote_> |
 | git remote show <_remote_> | Show information about a remote |
 | git remote add <_shortname_> <_url_> | Add new <_remote_> repository |
-| git fetch <_remote_> | Download all changes[^a] from <_remote_> but don't integrate into HEAD |
-| git pull <_remote_> <_branch_> | Download changes and merge[^b] <_remote_> into HEAD |
-| git push <_remote_> <_branch_> | Push local changes to <remote> |
+| git fetch <_remote_> | Download all changes[^b] from <_remote_> but don't integrate into HEAD |
+| git pull <_remote_> <_branch_> | Download changes and merge[^c] <_remote_> into HEAD |
+| git push <_remote_> <_branch_> | Push local changes to <_remote_> |
+| git push -u <_remote_> <_branch_> | Push local changes to <_remote_> and track it |
 | git push <_remote_> --tags | Push all local tags to <remote> |
-| git push <_remote_> --delete <_branch_> | Delete <_branch_> from <_remote_>[^c] |
+| git push <_remote_> --delete <_branch_> | Delete <_branch_> from <_remote_>[^d] |
 | git push <_remote_> --delete <_tag_name_> | Delete tag <_tag_name_> from <_remote_> |
 | git branch -dr <_remote/branch_> | Delete a local remote tracking branch <_remote/branch_> |
 | git push --tags | Publish your tags |
@@ -80,9 +83,9 @@ Git commands cheat sheet
 | git reset --hard <_commit_> | Reset HEAD pointer to <_commit_> and discard all following changes |
 | git reset --keep <_commit_> | Reset HEAD pointer to <_commit_> and preserve uncommitted local changes |
 
-###### Footnotes
+##### Footnotes
 [^1]: In git references or refs are refrences to commits. E.g. branches, remote-tracking branches and tags. 
-[^a]: Download references alongwith objects necessary to complete their histories.
-[^b]: Instead of merge we can also do rebasing
-[^c]: It also delete corresponding remote tracking branch.
-  
+[^a]: Also create a tracking branch based on a remote branch
+[^b]: Download references alongwith objects necessary to complete their histories.
+[^c]: Instead of merge we can also do rebasing
+[^d]: It also delete corresponding remote tracking branch.
